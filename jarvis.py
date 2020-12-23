@@ -1,3 +1,4 @@
+#Parte degli import
 import os
 import playsound
 import speech_recognition as sp
