@@ -5,7 +5,7 @@ import speech_recognition as sp
 from random import randrange
 from gtts import gTTS
 
-greetings_in = ["ciao jarvis", "buongiorno jarvis", "hey jarvis"]
+greetings_in = ["ciao jarvis", "buongiorno jarvis", "ehi jarvis"]
 greetings_out = ["salve", "buongiorno"]
 
 
