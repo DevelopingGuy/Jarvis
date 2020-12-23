@@ -40,5 +40,9 @@ while True:
         if text_in in greetings_in:
             ran = randrange(len(greetings_out))
             text_out = greetings_out[ran]
+        if text_in == 'salve':
+            ran = 'salve anche a te'
+            text_out = ran
+        
     speak(text_out)
     
