@@ -5,10 +5,11 @@ import speech_recognition as sp
 from random import randrange
 from gtts import gTTS
 
+#Variabili con domande e risposte
 greetings_in = ["ciao jarvis", "buongiorno jarvis", "ehi jarvis"]
 greetings_out = ["salve", "buongiorno"]
 
-
+#Parte audio del progetto
 def speak(text):
     tts = gTTS(text=text, lang='it')
     filename = "voce.mp3"
@@ -31,7 +32,7 @@ def get_audio():
             print("errore")
     return result
 
-
+#Parte delle risposte
 while True:
     text_in = get_audio()
     text_in = text_in.lower()
@@ -43,6 +44,5 @@ while True:
         if text_in == 'salve':
             ran = 'salve anche a te'
             text_out = ran
-        
     speak(text_out)
     
