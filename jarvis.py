@@ -4,6 +4,8 @@ import playsound
 import speech_recognition as sp
 from random import randrange
 from gtts import gTTS
+from datetime import datetime 
+import time
 
 #Variabili con domande e risposte
 greetings_in = ["ciao jarvis", "buongiorno jarvis", "ehi jarvis"]
@@ -41,8 +43,22 @@ while True:
         if text_in in greetings_in:
             ran = randrange(len(greetings_out))
             text_out = greetings_out[ran]
+            speak(text_out)
         if text_in == 'salve':
             ran = 'salve anche a te'
             text_out = ran
-    speak(text_out)
-    
+            speak(text_out)
+        if text_in == 'chi è ale':
+            ran = 'Ale è uno degli sviluppatori che mi ha dato vita'
+            text_out = ran
+            speak(text_out)
+        if text_in == 'jarvis':
+            playsound.playsound('/home/ale/Desktop/GitHub/Jarvis/File/jarvis.mp3')
+        if text_in == 'che ore sono':
+            t = time.localtime()
+            current_time = time.strftime("%H:%M", t)
+
+
+            speak(current_time)
+        
+
